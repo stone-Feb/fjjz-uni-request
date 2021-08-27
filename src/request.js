@@ -1,10 +1,5 @@
 
 
-
-
-
-
-
 import Request from './class';
 import * as util  from './helpers/util';
 import defaults from './defaults';
