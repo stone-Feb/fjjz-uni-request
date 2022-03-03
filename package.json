@@ -1,6 +1,6 @@
 {
   "name": "fjjz-uni-request",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "用于附近家政uni-app网络请求封装",
   "Repository": "https://github.com/topb25/fjjz-uni-request",
   "main": "index.js",
