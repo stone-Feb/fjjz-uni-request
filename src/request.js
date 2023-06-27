@@ -1,9 +1,6 @@
-
-
 import Request from './class';
 import * as util  from './helpers/util';
 import defaults from './defaults';
-
 
 function createInstance(config) {
     let context = new Request(config);
@@ -14,7 +11,6 @@ function createInstance(config) {
 }
 
 let request = createInstance(defaults);
-
 
 // 用于创建多个实例
 request.create = function (config) {
@@ -28,7 +24,4 @@ request.spread = function (callback){
     }
 }
 
-
 export default request; 
-
-

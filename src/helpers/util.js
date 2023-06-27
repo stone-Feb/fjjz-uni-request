@@ -20,7 +20,6 @@ export const copyobj = function( a, b ){
     return Object.assign( {} , a ,b );
 }
 
-
 export const merge = function(){
     var result = {};
     Array.from(arguments).forEach( e =>{
@@ -33,8 +32,6 @@ export const merge = function(){
     });
     return result;
 }
-
-
 
 export const deepMerge = function () {
     let result = {};
@@ -51,20 +48,15 @@ export const deepMerge = function () {
     return result ;
 }
 
-
 export const isEmptyObject = function(obj){
     return Object.getOwnPropertyNames(obj).length === 0
 }
-
-
 
 export const combineURLs = function (baseURL, relativeURL) {
     return relativeURL
       ? baseURL.replace(/\/+$/, '') + '/' + relativeURL.replace(/^\/+/, '')
       : baseURL;
 };
-
-
 
 function encode(val) {
     return encodeURIComponent(val).
@@ -76,6 +68,7 @@ function encode(val) {
         replace(/%5B/gi, '[').
         replace(/%5D/gi, ']');
 }
+
 export const buildURL = function ( url , paramsObject ){
     if( !paramsObject || isEmptyObject(paramsObject) ) return url;
     let parts = [];
@@ -85,14 +78,12 @@ export const buildURL = function ( url , paramsObject ){
     return url += ( url.indexOf('?') === -1 ? '?' : '&' ) + parts.join('&');
 }
 
-
 /**
  * Determines whether the specified URL is absolute
  *
  * @param {string} url The URL to test
  * @returns {boolean} True if the specified URL is absolute, otherwise false
  */
-
 export const isAbsoluteURL =  function (url) {
     // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
     // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed

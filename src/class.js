@@ -2,7 +2,6 @@ import * as util  from './helpers/util';
 import InterceptorManager from './InterceptorManager';
 import { dispatchRequest } from './core/dispatchRequest';
 
-
 class Request {
     constructor( config ){
         this.defaults = config;
@@ -41,8 +40,6 @@ class Request {
     }
 }
 
-
-
 ['delete', 'get', 'head', 'options', 'trace'].forEach(method => {
     Request.prototype[method] = function ( url,config ) {
         return this.request( util.merge(config || {} ,{
@@ -51,9 +48,6 @@ class Request {
         }) );
     }
 });
-
-
-
 
 ['post', 'put', 'patch' ].forEach(method => {
     Request.prototype[method] = function ( url, data, config ) {
@@ -64,7 +58,5 @@ class Request {
         }) );
     }
 });
-
-
 
 export default Request;

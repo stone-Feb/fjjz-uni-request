@@ -1,6 +1,5 @@
 import * as util from '../helpers/util';
 
-
 export const dispatchRequest = function (config) {
 
     if (config.baseURL && !util.isAbsoluteURL(config.url)) {
