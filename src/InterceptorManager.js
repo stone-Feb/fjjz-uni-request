@@ -11,7 +11,7 @@ export default class InterceptorManager{
         return this.handlers.length - 1;
     }
 
-    eject(id){
+    reject(id){
         if( this.handlers[id] ){
             this.handlers[id] = null;
         }
